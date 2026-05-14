@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurace a penzion Zátiší | Rumburk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        [lang="de"] { display: none; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="text-2xl font-bold tracking-tighter text-stone-900">ZÁTIŠÍ</div>
+                
+                <div class="hidden md:flex space-x-8 font-medium" data-lang="cs">
+                    <a href="#overview" class="hover:text-amber-700 transition">O nás</a>
+                    <a href="#penzion" class="hover:text-amber-700 transition">Penzion</a>
+                    <a href="#menu" class="hover:text-amber-700 transition">Jídelní lístek</a>
+                    <a href="#reviews" class="hover:text-amber-700 transition">Recenze</a>
+                </div>
+
+                <div class="hidden md:flex space-x-8 font-medium hidden" data-lang="de">
+                    <a href="#overview" class="hover:text-amber-700 transition">Über uns</a>
+                    <a href="#penzion" class="hover:text-amber-700 transition">Pension</a>
+                    <a href="#menu" class="hover:text-amber-700 transition">Speisekarte</a>
+                    <a href="#reviews" class="hover:text-amber-700 transition">Bewertungen</a>
+                </div>
+
+                <div class="flex items-center space-x-6">
+                    <div class="flex space-x-2 border border-stone-200 rounded-full p-1 bg-stone-100 text-xs font-bold">
+                        <button onclick="switchLang('cs')" id="btn-cs" class="px-3 py-1 rounded-full bg-white shadow-sm text-amber-700">CZ</button>
+                        <button onclick="switchLang('de')" id="btn-de" class="px-3 py-1 rounded-full text-stone-500 hover:text-stone-900">DE</button>
+                    </div>
+                    <a href="tel:+420777106595" class="bg-stone-900 text-white px-6 py-2 rounded-full hover:bg-stone-700 transition text-sm">
+                        <i class="fa-solid fa-phone mr-1"></i> <span data-lang="cs">Rezervace</span><span data-lang="de" class="hidden">Buchen</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center bg-stone-900 text-white">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="images/background-zatisi.jpg" class="w-full h-full object-cover opacity-40" alt="Penzion Zátiší Rumburk">
+        </div>
+        <div class="relative text-center px-4 max-w-4xl">
+            <span class="uppercase tracking-[0.3em] text-xs md:text-sm mb-4 block text-amber-400 font-semibold">Rumburk • Gästehaus & Restaurant</span>
+            
+            <h1 data-lang="cs" class="text-4xl md:text-7xl font-bold mb-6 tracking-tight">Rodinný penzion a restaurace Zátiší</h1>
+            <h1 data-lang="de" class="text-4xl md:text-7xl font-bold mb-6 tracking-tight hidden">Familiäre Pension & Restaurant Zátiší</h1>
+            
+            <p data-lang="cs" class="text-base md:text-xl text-stone-200 max-w-2xl mx-auto mb-10">Útulné ubytování a poctivá kuchyně v klidném prostředí Rumburku. Ideální místo pro odpočinek, turisty i cyklisty na pomezí národního parku.</p>
+            <p data-lang="de" class="text-base md:text-xl text-stone-200 max-w-2xl mx-auto mb-10 hidden">Gemütliche Unterkunft und ehrliche Küche in ruhiger Umgebung von Rumburk. Ein idealer Ort für Erholung, Wanderer und Radfahrer nahe dem Nationalpark.</p>
+            
+            <div class="flex flex-wrap justify-center gap-3">
+                <div class="flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm">
+                    <i class="fa-solid fa-food text-amber-400 mr-2"></i> <span data-lang="cs">Wi-Fi zdarma</span><span data-lang="de" class="hidden">Kostenloses WLAN</span>
+                </div>
+                <div class="flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm">
+                    <i class="fa-solid fa-wheelchair text-amber-400 mr-2"></i> <span data-lang="cs">Bezbariérové</span><span data-lang="de" class="hidden">Barrierefrei</span>
+                </div>
+                <div class="flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm">
+                     <span data-lang="cs">Soukromé parkování</span><span data-lang="de" class="hidden">Privatparkplatz</span>
+                </div>
+                <div class="flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm">
+                    <i class="fa-regular fa-hat-chef text-amber-400 mr-2"></i> <span data-lang="cs">Restaurace</span><span data-lang="de" class="hidden">Privatparkplatz</span>
+                </div>
+                <div class="flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm">
+                    <i class="fa-regular fa-utensils text-amber-400 mr-2"></i> <span data-lang="cs">Snídaně</span><span data-lang="de" class="hidden">Privatparkplatz</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 data-lang="cs" class="text-3xl font-bold mb-6">Tradiční pohostinnost v klidném zátiší</h2>
+                <h2 data-lang="de" class="text-3xl font-bold mb-6 hidden">Traditionelle Gastfreundschaft in ruhiger Lage</h2>
+                
+                <p data-lang="cs" class="text-stone-600 leading-relaxed mb-6">
+                    Náš penzion a restaurace se nachází na adrese Krásnolipská 825/70 v Rumburku. Nabízíme příjemné útočiště pro individuální turisty, rodiny i organizované skupiny mířící do Českého Švýcarska. Celý objekt je bezbariérový, kompletně nekuřácký a přizpůsobený pro vaše maximální pohodlí. V areálu je zajištěno bezpečí pomocí kamerového systému.
+                </p>
+                <p data-lang="de" class="text-stone-600 leading-relaxed mb-6 hidden">
+                    Unsere Pension und unser Restaurant befinden sich in Krásnolipská 825/70, Rumburk. Wir bieten einen idealen Rückzugsort für Touristen, Familien und Gruppen, die die Böhmische Schweiz besuchen. Die gesamte Anlage ist barrierefrei, komplett rauchfrei und videoüberwacht für Ihre Sicherheit.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="border-l-4 border-amber-600 pl-4">
+                        <span data-lang="cs" class="block font-bold">Možnosti platby</span><span data-lang="de" class="block font-bold hidden">Zahlungsmöglichkeiten</span>
+                        <span data-lang="cs" class="text-sm text-stone-600">Hotovost (Kč/€) • Možnost vystavení faktury</span>
+                        <span data-lang="de" class="text-sm text-stone-600 hidden">Barzahlung (CZK/EUR) • Rechnungsstellung möglich</span>
+                    </div>
+                    <div class="border-l-4 border-amber-600 pl-4">
+                        <span data-lang="cs" class="block font-bold">Kde nás najdete</span><span data-lang="de" class="block font-bold hidden">Adresse</span>
+                        <span class="text-sm text-stone-500">Krásnolipská 825/70, Rumburk</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="images/penzion 2.webp" class="rounded-2xl shadow-md h-48 w-full object-cover mt-8" alt="Interiér penzionu Zátiší">
+                <img src="images/penzion 3.webp" class="rounded-2xl shadow-md h-48 w-full object-cover" alt="Pokoj penzionu Rumburk">
+            </div>
+        </div>
+    </section>
+
+    <section id="penzion" class="py-24 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 data-lang="cs" class="text-3xl font-bold mb-4">Komfortní ubytování & Služby</h2>
+                <h2 data-lang="de" class="text-3xl font-bold mb-4 hidden">Komfortable Unterkunft & Services</h2>
+                <p data-lang="cs" class="text-stone-600">Odpočiňte si v našich útulných, kompletně vytápěných a nekuřáckých pokojích s moderním zázemím.</p>
+                <p data-lang="de" class="text-stone-600 hidden">Entspannen Sie sich in unseren gemütlichen, beheizten Nichtraucherzimmern mit moderner Ausstattung.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <img src="images/penzion 4.webp" class="w-full h-64 object-cover" alt="Ubytování Rumburk">
+                    <div class="p-6">
+                        <h3 data-lang="cs" class="font-bold text-xl mb-2">Vybavení pokojů</h3>
+                        <h3 data-lang="de" class="font-bold text-xl mb-2 hidden">Zimmerausstattung</h3>
+                        <p data-lang="cs" class="text-sm text-stone-500">Pohodlné ložnice včetně čistého povlečení a rychlovarné konvice pro vaše ranní pohodlí.</p>
+                        <p data-lang="de" class="text-sm text-stone-500 hidden">Komfortable Schlafzimmer inklusive frischer Bettwäsche und Wasserkocher für Ihren Komfort.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <img src="images/penzion 5.webp" class="w-full h-64 object-cover" alt="Penzion v klidu">
+                    <div class="p-6">
+                        <h3 data-lang="cs" class="font-bold text-xl mb-2">Zázemí pro rodiny</h3>
+                        <h3 data-lang="de" class="font-bold text-xl mb-2 hidden">Für Familien</h3>
+                        <p data-lang="cs" class="text-sm text-stone-500">Pro vaše nejmenší je přímo v areálu k dispozici vybavená dětská herna na hraní a zábavu.</p>
+                        <p data-lang="de" class="text-sm text-stone-500 hidden">Für Ihre Kleinen steht direkt in der Anlage ein ausgestattetes Spielzimmer zur Verfügung.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <img src="images/penzion 6.webp" class="w-full h-64 object-cover" alt="Bezbariérová koupelna">
+                    <div class="p-6">
+                        <h3 data-lang="cs" class="font-bold text-xl mb-2">Vlastní koupelny</h3>
+                        <h3 data-lang="de" class="font-bold text-xl mb-2 hidden">Eigene Badezimmer</h3>
+                        <p data-lang="cs" class="text-sm text-stone-500">Každá koupelna má sprchu, toaletu, ručníky, toaletní papír a bezplatné toaletní potřeby.</p>
+                        <p data-lang="de" class="text-sm text-stone-500 hidden">Jedes Bad verfügt über Dusche, WC, Handtücher, Toilettenpapier und kostenlose Pflegeprodukte.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 md:p-12 border border-stone-200 shadow-sm">
+                <h3 data-lang="cs" class="font-bold text-xl mb-8 border-b pb-4">Co vše u nás během pobytu oceníte</h3>
+                <h3 data-lang="de" class="font-bold text-xl mb-8 border-b pb-4 hidden">Was Sie bei Ihrem Aufenthalt schätzen werden</h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-square-parking text-amber-700 mt-1 text-base"></i>
+                        <div>
+                            <span data-lang="cs" class="font-semibold block">Parkování</span><span data-lang="de" class="font-semibold block hidden">Parken</span>
+                            <span data-lang="cs" class="text-stone-500 text-xs">Soukromé v areálu</span><span data-lang="de" class="text-stone-500 text-xs hidden">Privat im Areal</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-wifi text-amber-700 mt-1 text-base"></i>
+                        <div>
+                            <span data-lang="cs" class="font-semibold block">Internet</span><span data-lang="de" class="font-semibold block hidden">Internet</span>
+                            <span data-lang="cs" class="text-stone-500 text-xs">Bezplatná Wi-Fi v pokojích</span><span data-lang="de" class="text-stone-500 text-xs hidden">Kostenloses WLAN im Zimmer</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-smog text-amber-700 mt-1 text-base"></i>
+                        <div>
+                            <span data-lang="cs" class="font-semibold block">Prostředí</span><span data-lang="de" class="font-semibold block hidden">Umgebung</span>
+                            <span data-lang="cs" class="text-stone-500 text-xs">Nekuřácké pokoje a prostory</span><span data-lang="de" class="text-stone-500 text-xs hidden">Nichtraucher-Bereiche</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-shield-halved text-amber-700 mt-1 text-base"></i>
+                        <div>
+                            <span data-lang="cs" class="font-semibold block">Zabezpečení</span><span data-lang="de" class="font-semibold block hidden">Sicherheit</span>
+                            <span data-lang="cs" class="text-stone-500 text-xs">Kamerový systém & hasicí přístroje</span><span data-lang="de" class="text-stone-500 text-xs hidden">Videoüberwachung</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-4 mt-8">
+                <img src="images/penzion 7.webp" class="rounded-2xl h-40 w-full object-cover shadow-sm" alt="Zátiší interiér">
+                <img src="images/penzion 8.webp" class="rounded-2xl h-40 w-full object-cover shadow-sm" alt="Zátiší ubytování">
+                <img src="images/penzion 9.webp" class="rounded-2xl h-40 w-full object-cover shadow-sm" alt="Zátiší penzion">
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 data-lang="cs" class="text-3xl font-bold mb-4">Poctivá domácí kuchyně</h2>
+                    <h2 data-lang="de" class="text-3xl font-bold mb-4 hidden">Ehrliche hausgemachte Küche</h2>
+                    <p data-lang="cs" class="text-stone-600 mb-6">Přijďte ochutnat naše speciality, denní obědová menu nebo si užijte večerní posezení. Nabízíme široký výběr jídel včetně vegetariánských variant a dětského menu.</p>
+                    <p data-lang="de" class="text-stone-600 mb-6 hidden">Probieren Sie unsere Spezialitäten, Mittagsmenüs oder genießen Sie das gemütliche Beisammensein am Abend. Wir bieten eine große Auswahl an Gerichten, einschließlich vegetarischer Optionen und einer Kinderspeisekarte.</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="jidelni-listek 2.jpg" target="_blank" class="inline-flex items-center bg-amber-700 hover:bg-amber-800 text-white px-5 py-3 rounded-xl transition font-medium shadow-sm text-sm">
+                            <i class="fa-solid fa-file-image mr-2"></i>
+                            <span data-lang="cs">Prohlížet jídelní lístek</span>
+                            <span data-lang="de" class="hidden">Speisekarte ansehen</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="images/jidlo.jpg" class="rounded-3xl shadow-lg max-h-80 w-full object-cover" alt="Restaurace Zátiší Rumburk jídlo">
+                </div>
+            </div>
+
+            <div class="border-t border-stone-200 pt-12">
+                <h3 data-lang="cs" class="text-center font-bold text-xl mb-8">Nahlédněte do našeho lístku</h3>
+                <h3 data-lang="de" class="text-center font-bold text-xl mb-8 hidden">Werfen Sie einen Blick in unsere Karte</h3>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
+                    <a href="images/jidelni-listek.jpg" target="_blank" class="group relative block aspect-[3/4] overflow-hidden rounded-xl border bg-stone-100 shadow-sm hover:shadow transition">
+                        <img src="images/jidelni-listek.jpg" class="h-full w-full object-cover group-hover:scale-105 transition duration-300" alt="Strana 1">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">Zvětšit / Vergrößern</div>
+                    </a>
+                    <a href="images/jidelni-listek 2.jpg" target="_blank" class="group relative block aspect-[3/4] overflow-hidden rounded-xl border bg-stone-100 shadow-sm hover:shadow transition">
+                        <img src="images/jidelni-listek 2.jpg" class="h-full w-full object-cover group-hover:scale-105 transition duration-300" alt="Strana 2">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">Zvětšit / Vergrößern</div>
+                    </a>
+                    <a href="images/jidelni-listek 3.jpg" target="_blank" class="group relative block aspect-[3/4] overflow-hidden rounded-xl border bg-stone-100 shadow-sm hover:shadow transition">
+                        <img src="images/jidelni-listek 3.jpg" class="h-full w-full object-cover group-hover:scale-105 transition duration-300" alt="Strana 3">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">Zvětšit / Vergrößern</div>
+                    </a>
+                    <a href="images/jidelni-listek 4.jpg" target="_blank" class="group relative block aspect-[3/4] overflow-hidden rounded-xl border bg-stone-100 shadow-sm hover:shadow transition">
+                        <img src="images/jidelni-listek 4.jpg" class="h-full w-full object-cover group-hover:scale-105 transition duration-300" alt="Strana 4">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">Zvětšit / Vergrößern</div>
+                    </a>
+                    <a href="images/jidelni-listek 5.jpg" target="_blank" class="group relative block aspect-[3/4] overflow-hidden rounded-xl border bg-stone-100 shadow-sm hover:shadow transition">
+                        <img src="images/jidelni-listek 5.jpg" class="h-full w-full object-cover group-hover:scale-105 transition duration-300" alt="Strana 5">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">Zvětšit / Vergrößern</div>
+                    </a>
+                </div>
+                <p data-lang="cs" class="text-center text-xs text-stone-400 mt-6">K dispozici máme celkem 10 stránek kompletního jídelního a nápojového lístku přímo na restauraci.</p>
+                <p data-lang="de" class="text-center text-xs text-stone-400 mt-6 hidden">Insgesamt 10 Seiten unserer kompletten Speise- und Getränkekarte stehen Ihnen vor Ort zur Verfügung.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-stone-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="mb-8"><i class="fa-solid fa-quote-left text-3xl text-amber-500"></i></div>
+            <p class="text-xl italic mb-8">"Wunderschöne ruhige Lage in Rumburk. Sehr freundliches Personal, toller Service für deutsche Touristen, alles sauber und barrierefrei. Hunde sind wirklich willkommen!"</p>
+            <div class="flex items-center justify-center space-x-1 text-amber-500 mb-2">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <span class="text-stone-400">— Hans M., Google Reviews</span>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t py-16 text-sm">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="font-bold text-lg mb-4 text-stone-900">Zátiší Rumburk</h3>
+                <p data-lang="cs" class="text-stone-500 mb-4">Restaurace a penzion rodinného typu na pomezí klidu a přírody. Váš ideální výchozí bod pro objevování krás Šluknovska.</p>
+                <p data-lang="de" class="text-stone-500 mb-4 hidden">Familiäres Restaurant und Pension inmitten von Ruhe und Natur. Ihr idealer Ausgangspunkt zur Erkundung des Schluckenauer Zipfels.</p>
+                
+                <div class="border-t border-stone-200 pt-4 text-stone-400 text-xs">
+                    <span data-lang="cs">🗣️ Mluvíme česky a německy</span>
+                    <span data-lang="de" class="hidden">🗣️ Wir sprechen Tschechisch und Deutsch</span>
+                </div>
+            </div>
+            <div>
+                <h4 data-lang="cs" class="font-bold mb-4">Kontakt & Kde nás najdete</h4>
+                <h4 data-lang="de" class="font-bold mb-4 hidden">Kontakt & Anfahrt</h4>
+                <p class="text-stone-700 font-semibold mb-3"><i class="fa-solid fa-money-bill-wave text-amber-700 mr-2"></i> <span data-lang="cs">Pouze hotovost (Kč / €)</span><span data-lang="de" class="hidden">Nur Barzahlung (CZK / EUR)</span></p>
+                <p class="text-stone-500 mb-2"><i class="fa-solid fa-location-dot text-stone-400 mr-2"></i> Krásnolipská 825/70, 408 01 Rumburk 1</p>
+                <p class="text-stone-500 mb-4">
+                    <i class="fa-solid fa-phone text-stone-400 mr-2"></i> 
+                    <a href="tel:+420777106595" class="hover:text-amber-700 transition">+420 777 106 595</a>
+                </p>
+                
+                <a href="http://googleusercontent.com/maps.google.com/2" target="_blank" class="inline-flex items-center text-xs bg-stone-100 hover:bg-stone-200 text-stone-700 px-3 py-2 rounded-lg transition font-semibold border">
+                    <i class="fa-solid fa-map-location-dot mr-2 text-amber-700"></i>
+                    <span data-lang="cs">Navigovat přes Google Maps</span>
+                    <span data-lang="de" class="hidden">Route via Google Maps</span>
+                </a>
+            </div>
+            <div>
+                <h4 data-lang="cs" class="font-bold mb-4">Otevírací doba</h4>
+                <h4 data-lang="de" class="font-bold mb-4 hidden">Öffnungszeiten</h4>
+                
+                <ul class="space-y-1 text-stone-500" data-lang="cs">
+                    <li class="flex justify-between"><span>Pondělí:</span> <span class="font-semibold text-red-600">Zavřeno</span></li>
+                    <li class="flex justify-between"><span>Úterý:</span> <span>14:00 – 20:30</span></li>
+                    <li class="flex justify-between"><span>Středa:</span> <span>14:00 – 20:30</span></li>
+                    <li class="flex justify-between"><span>Čtvrtek:</span> <span>14:00 – 20:30</span></li>
+                    <li class="flex justify-between"><span>Pátek:</span> <span>12:00 – 21:30</span></li>
+                    <li class="flex justify-between"><span>Sobota:</span> <span>12:00 – 21:30</span></li>
+                    <li class="flex justify-between"><span>Neděle:</span> <span>12:00 – 21:00</span></li>
+                </ul>
+
+                <ul class="space-y-1 text-stone-500 hidden" data-lang="de">
+                    <li class="flex justify-between"><span>Montag:</span> <span class="font-semibold text-red-600">Geschlossen</span></li>
+                    <li class="flex justify-between"><span>Dienstag:</span> <span>14:00 – 20:30</span></li>
+                    <li class="flex justify-between"><span>Mittwoch:</span> <span>14:00 – 20:30</span></li>
+                    <li class="flex justify-between"><span>Donnerstag:</span> <span>14:00 – 20:30</span></li>
+                    <li class="flex justify-between"><span>Freitag:</span> <span>12:00 – 21:30</span></li>
+                    <li class="flex justify-between"><span>Samstag:</span> <span>12:00 – 21:30</span></li>
+                    <li class="flex justify-between"><span>Sonntag:</span> <span>12:00 – 21:00</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-stone-400 text-xs border-t pt-6">
+            © 2026 Restaurace a penzion Zátiší Rumburk. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            const csElements = document.querySelectorAll('[data-lang="cs"]');
+            const deElements = document.querySelectorAll('[data-lang="de"]');
+            const btnCs = document.getElementById('btn-cs');
+            const btnDe = document.getElementById('btn-de');
+
+            if (lang === 'cs') {
+                csElements.forEach(el => el.classList.remove('hidden'));
+                deElements.forEach(el => el.classList.add('hidden'));
+                btnCs.className = "px-3 py-1 rounded-full bg-white shadow-sm text-amber-700";
+                btnDe.className = "px-3 py-1 rounded-full text-stone-500 hover:text-stone-900";
+            } else {
+                csElements.forEach(el => el.classList.add('hidden'));
+                deElements.forEach(el => el.classList.remove('hidden'));
+                btnDe.className = "px-3 py-1 rounded-full bg-white shadow-sm text-amber-700";
+                btnCs.className = "px-3 py-1 rounded-full text-stone-500 hover:text-stone-900";
+            }
+        }
+    </script>
+</body>
+</html>
