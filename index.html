@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurace a penzion Zátiší | Rumburk</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -17,7 +17,9 @@
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="text-2xl font-bold tracking-tighter text-stone-900">ZÁTIŠÍ</div>
+                <div class="text-2xl font-bold tracking-tighter text-stone-900">
+                    <a href="#preview" class="hover:text-amber-700 transition">ZÁTIŠÍ</a>
+                </div>
                 
                 <div class="hidden md:flex space-x-8 font-medium" data-lang="cs">
                     <a href="#overview" class="hover:text-amber-700 transition">O nás</a>
@@ -46,9 +48,9 @@
         </div>
     </nav>
 
-    <section class="relative h-screen flex items-center justify-center bg-stone-900 text-white">
+    <section id="preview" class="relative h-screen flex items-center justify-center bg-stone-900 text-white">
         <div class="absolute inset-0 overflow-hidden">
-            <img src="images/background-zatisi.jpg" class="w-full h-full object-cover opacity-40" alt="Penzion Zátiší Rumburk">
+            <img src="images/background-zatisi.jpg" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920'" class="w-full h-full object-cover opacity-40" alt="Penzion Zátiší Rumburk">
         </div>
         <div class="relative text-center px-4 max-w-4xl">
             <span class="uppercase tracking-[0.3em] text-xs md:text-sm mb-4 block text-amber-400 font-semibold">Rumburk • Gästehaus & Restaurant</span>
@@ -61,19 +63,19 @@
             
             <div class="flex flex-wrap justify-center gap-3">
                 <div class="flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm">
-                    <i class="fa-solid fa-food text-amber-400 mr-2"></i> <span data-lang="cs">Wi-Fi zdarma</span><span data-lang="de" class="hidden">Kostenloses WLAN</span>
+                    <i class="fa-solid fa-wifi text-amber-400 mr-2"></i> <span data-lang="cs">Wi-Fi zdarma</span><span data-lang="de" class="hidden">Kostenloses WLAN</span>
                 </div>
                 <div class="flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm">
                     <i class="fa-solid fa-wheelchair text-amber-400 mr-2"></i> <span data-lang="cs">Bezbariérové</span><span data-lang="de" class="hidden">Barrierefrei</span>
                 </div>
                 <div class="flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm">
-                     <span data-lang="cs">Soukromé parkování</span><span data-lang="de" class="hidden">Privatparkplatz</span>
+                    <i class="fa-solid fa-square-parking text-amber-400 mr-2"></i> <span data-lang="cs">Soukromé parkování</span><span data-lang="de" class="hidden">Privatparkplatz</span>
                 </div>
                 <div class="flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm">
-                    <i class="fa-regular fa-hat-chef text-amber-400 mr-2"></i> <span data-lang="cs">Restaurace</span><span data-lang="de" class="hidden">Privatparkplatz</span>
+                    <i class="fa-solid fa-utensils text-amber-400 mr-2"></i> <span data-lang="cs">Restaurace</span><span data-lang="de" class="hidden">Restaurant</span>
                 </div>
                 <div class="flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm">
-                    <i class="fa-regular fa-utensils text-amber-400 mr-2"></i> <span data-lang="cs">Snídaně</span><span data-lang="de" class="hidden">Privatparkplatz</span>
+                    <i class="fa-solid fa-mug-saucer text-amber-400 mr-2"></i> <span data-lang="cs">Snídaně</span><span data-lang="de" class="hidden">Frühstück</span>
                 </div>
             </div>
         </div>
@@ -95,7 +97,7 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="border-l-4 border-amber-600 pl-4">
                         <span data-lang="cs" class="block font-bold">Možnosti platby</span><span data-lang="de" class="block font-bold hidden">Zahlungsmöglichkeiten</span>
-                        <span data-lang="cs" class="text-sm text-stone-600">Hotovost (Kč/€) • Možnost vystavení faktury</span>
+                        <span data-lang="cs" class="text-sm text-stone-600">Hotovost (Kč/€)</span>
                         <span data-lang="de" class="text-sm text-stone-600 hidden">Barzahlung (CZK/EUR) • Rechnungsstellung möglich</span>
                     </div>
                     <div class="border-l-4 border-amber-600 pl-4">
@@ -105,8 +107,8 @@
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-4">
-                <img src="images/penzion 2.webp" class="rounded-2xl shadow-md h-48 w-full object-cover mt-8" alt="Interiér penzionu Zátiší">
-                <img src="images/penzion 3.webp" class="rounded-2xl shadow-md h-48 w-full object-cover" alt="Pokoj penzionu Rumburk">
+                <img src="images/penzion 7.webp" onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600'" class="rounded-2xl shadow-md h-48 w-full object-cover mt-8" alt="Interiér penzionu Zátiší">
+                <img src="images/penzion 6.webp" onerror="this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=600'" class="rounded-2xl shadow-md h-48 w-full object-cover" alt="Pokoj penzionu Rumburk">
             </div>
         </div>
     </section>
@@ -122,7 +124,7 @@
 
             <div class="grid md:grid-cols-3 gap-8 mb-16">
                 <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
-                    <img src="images/penzion 4.webp" class="w-full h-64 object-cover" alt="Ubytování Rumburk">
+                    <img src="images/penzion 4.webp" onerror="this.src='https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=600'" class="w-full h-64 object-cover" alt="Ubytování Rumburk">
                     <div class="p-6">
                         <h3 data-lang="cs" class="font-bold text-xl mb-2">Vybavení pokojů</h3>
                         <h3 data-lang="de" class="font-bold text-xl mb-2 hidden">Zimmerausstattung</h3>
@@ -131,16 +133,16 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
-                    <img src="images/penzion 5.webp" class="w-full h-64 object-cover" alt="Penzion v klidu">
+                    <img src="images/penzion 5.webp" onerror="this.src='https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?q=80&w=600'" class="w-full h-64 object-cover" alt="Klidná lokalita pro odpočinek">
                     <div class="p-6">
-                        <h3 data-lang="cs" class="font-bold text-xl mb-2">Zázemí pro rodiny</h3>
-                        <h3 data-lang="de" class="font-bold text-xl mb-2 hidden">Für Familien</h3>
-                        <p data-lang="cs" class="text-sm text-stone-500">Pro vaše nejmenší je přímo v areálu k dispozici vybavená dětská herna na hraní a zábavu.</p>
-                        <p data-lang="de" class="text-sm text-stone-500 hidden">Für Ihre Kleinen steht direkt in der Anlage ein ausgestattetes Spielzimmer zur Verfügung.</p>
+                        <h3 data-lang="cs" class="font-bold text-xl mb-2">Klid a relaxace</h3>
+                        <h3 data-lang="de" class="font-bold text-xl mb-2 hidden">Ruhe & Entspannung</h3>
+                        <p data-lang="cs" class="text-sm text-stone-500">Náš penzion nabízí příjemné a tiché prostředí.</p>
+                        <p data-lang="de" class="text-sm text-stone-500 hidden">Unsere Pension bietet eine gemütliche und ruhige Umgebung, ideal um nach einem erlebnisreichen Tag neue Energie zu tanken.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
-                    <img src="images/penzion 6.webp" class="w-full h-64 object-cover" alt="Bezbariérová koupelna">
+                    <img src="images/penzion 3.webp" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600'" class="w-full h-64 object-cover" alt="Bezbariérová koupelna">
                     <div class="p-6">
                         <h3 data-lang="cs" class="font-bold text-xl mb-2">Vlastní koupelny</h3>
                         <h3 data-lang="de" class="font-bold text-xl mb-2 hidden">Eigene Badezimmer</h3>
@@ -150,33 +152,49 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-3xl p-8 md:p-12 border border-stone-200 shadow-sm">
+            <div class="flex flex-col items-center justify-center pt-8 border-t border-stone-200 mt-10">
+                <p data-lang="cs" class="text-stone-600 text-sm mb-3">Chcete si u nás rezervovat ubytování?</p>
+                <p data-lang="de" class="text-stone-600 text-sm mb-3 hidden">Möchten Sie eine Unterkunft bei uns buchen?</p>
+                
+                <a href="https://www.booking.com/hotel/cz/penzion-restaurace-zatisi-rumburk.cs.html?label=mkt123sc-dbd27ed6-9a5c-4aa2-954b-60ac901a9d14&aid=8130349&ucfs=1&arphpl=1&checkin=2026-05-16&checkout=2026-05-17&dest_id=-554298&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=popularity&srpvid=2eef0cd6640104af&srepoch=1778723584&all_sr_blocks=776481604_350664357_2_2_0&highlighted_blocks=776481604_350664357_2_2_0&matching_block_id=776481604_350664357_2_2_0&sr_pri_blocks=776481604_350664357_2_2_0__3500&from=searchresults#hotelTmpl" target="_blank" rel="noopener noreferrer" 
+                class="inline-flex items-center gap-2 bg-[#003580] hover:bg-[#00224f] text-white px-6 py-3 rounded-xl font-medium transition shadow-sm cursor-pointer">
+                    <span data-lang="cs">Rezervovat ubytování na Booking.com</span>
+                    <span data-lang="de" class="hidden">Unterkunft auf Booking.com buchen</span>
+                </a>
+            </div>
+
+            <div class="bg-white mt-16 rounded-3xl p-8 md:p-12 border border-stone-200 shadow-sm">
                 <h3 data-lang="cs" class="font-bold text-xl mb-8 border-b pb-4">Co vše u nás během pobytu oceníte</h3>
                 <h3 data-lang="de" class="font-bold text-xl mb-8 border-b pb-4 hidden">Was Sie bei Ihrem Aufenthalt schätzen werden</h3>
                 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
-                    <div class="flex items-start space-x-3">
-                        <i class="fa-solid fa-square-parking text-amber-700 mt-1 text-base"></i>
-                        <div>
-                            <span data-lang="cs" class="font-semibold block">Parkování</span><span data-lang="de" class="font-semibold block hidden">Parken</span>
-                            <span data-lang="cs" class="text-stone-500 text-xs">Soukromé v areálu</span><span data-lang="de" class="text-stone-500 text-xs hidden">Privat im Areal</span>
+                    <div class="bg-[#F5F5F5] rounded-xl p-4 flex items-start space-x-3">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-square-parking text-amber-700 mt-1 text-base"></i>
+                            <div>
+                                <span data-lang="cs" class="font-semibold block">Parkování</span><span data-lang="de" class="font-semibold block hidden">Parken</span>
+                                <span data-lang="cs" class="text-stone-500 text-xs">Soukromé v areálu</span><span data-lang="de" class="text-stone-500 text-xs hidden">Privat im Areal</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-start space-x-3">
-                        <i class="fa-solid fa-wifi text-amber-700 mt-1 text-base"></i>
-                        <div>
-                            <span data-lang="cs" class="font-semibold block">Internet</span><span data-lang="de" class="font-semibold block hidden">Internet</span>
-                            <span data-lang="cs" class="text-stone-500 text-xs">Bezplatná Wi-Fi v pokojích</span><span data-lang="de" class="text-stone-500 text-xs hidden">Kostenloses WLAN im Zimmer</span>
+
+                    <div class="bg-[#F5F5F5] rounded-xl p-4 flex items-start space-x-3">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-wifi text-amber-700 mt-1 text-base"></i>
+                            <div>
+                                <span data-lang="cs" class="font-semibold block">Internet</span><span data-lang="de" class="font-semibold block hidden">Internet</span>
+                                <span data-lang="cs" class="text-stone-500 text-xs">Bezplatná Wi-Fi v pokojích</span><span data-lang="de" class="text-stone-500 text-xs hidden">Kostenloses WLAN im Zimmer</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-start space-x-3">
+                    <div class="bg-[#F5F5F5] rounded-xl p-4 flex items-start space-x-3">
                         <i class="fa-solid fa-smog text-amber-700 mt-1 text-base"></i>
                         <div>
                             <span data-lang="cs" class="font-semibold block">Prostředí</span><span data-lang="de" class="font-semibold block hidden">Umgebung</span>
                             <span data-lang="cs" class="text-stone-500 text-xs">Nekuřácké pokoje a prostory</span><span data-lang="de" class="text-stone-500 text-xs hidden">Nichtraucher-Bereiche</span>
                         </div>
                     </div>
-                    <div class="flex items-start space-x-3">
+                    <div class="bg-[#F5F5F5] rounded-xl p-4 flex items-start space-x-3">
                         <i class="fa-solid fa-shield-halved text-amber-700 mt-1 text-base"></i>
                         <div>
                             <span data-lang="cs" class="font-semibold block">Zabezpečení</span><span data-lang="de" class="font-semibold block hidden">Sicherheit</span>
@@ -184,12 +202,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="grid grid-cols-3 gap-4 mt-8">
-                <img src="images/penzion 7.webp" class="rounded-2xl h-40 w-full object-cover shadow-sm" alt="Zátiší interiér">
-                <img src="images/penzion 8.webp" class="rounded-2xl h-40 w-full object-cover shadow-sm" alt="Zátiší ubytování">
-                <img src="images/penzion 9.webp" class="rounded-2xl h-40 w-full object-cover shadow-sm" alt="Zátiší penzion">
             </div>
         </div>
     </section>
@@ -199,63 +211,284 @@
             <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
                 <div>
                     <h2 data-lang="cs" class="text-3xl font-bold mb-4">Poctivá domácí kuchyně</h2>
-                    <h2 data-lang="de" class="text-3xl font-bold mb-4 hidden">Ehrliche hausgemachte Küche</h2>
+                    <h2 data-lang="de" class="text-3xl font-bold mb-4 hidden">Ehrliche hausgematche Küche</h2>
                     <p data-lang="cs" class="text-stone-600 mb-6">Přijďte ochutnat naše speciality, denní obědová menu nebo si užijte večerní posezení. Nabízíme široký výběr jídel včetně vegetariánských variant a dětského menu.</p>
                     <p data-lang="de" class="text-stone-600 mb-6 hidden">Probieren Sie unsere Spezialitäten, Mittagsmenüs oder genießen Sie das gemütliche Beisammensein am Abend. Wir bieten eine große Auswahl an Gerichten, einschließlich vegetarischer Optionen und einer Kinderspeisekarte.</p>
                     
                     <div class="flex flex-wrap gap-4">
-                        <a href="jidelni-listek 2.jpg" target="_blank" class="inline-flex items-center bg-amber-700 hover:bg-amber-800 text-white px-5 py-3 rounded-xl transition font-medium shadow-sm text-sm">
-                            <i class="fa-solid fa-file-image mr-2"></i>
+                        <button onclick="openMenuModal()" class="inline-flex items-center bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-xl transition font-medium shadow-sm text-sm cursor-pointer">
+                            <i class="fa-solid fa-book-open mr-2"></i>
                             <span data-lang="cs">Prohlížet jídelní lístek</span>
                             <span data-lang="de" class="hidden">Speisekarte ansehen</span>
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="images/jidlo.jpg" class="rounded-3xl shadow-lg max-h-80 w-full object-cover" alt="Restaurace Zátiší Rumburk jídlo">
+                    <img src="images/jidlo.jpg" onerror="this.src='https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800'" class="rounded-3xl shadow-lg max-h-80 w-full object-cover" alt="Restaurace Zátiší Rumburk jídlo">
                 </div>
             </div>
 
-            <div class="border-t border-stone-200 pt-12">
-                <h3 data-lang="cs" class="text-center font-bold text-xl mb-8">Nahlédněte do našeho lístku</h3>
-                <h3 data-lang="de" class="text-center font-bold text-xl mb-8 hidden">Werfen Sie einen Blick in unsere Karte</h3>
-                
-                <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
-                    <a href="images/jidelni-listek.jpg" target="_blank" class="group relative block aspect-[3/4] overflow-hidden rounded-xl border bg-stone-100 shadow-sm hover:shadow transition">
-                        <img src="images/jidelni-listek.jpg" class="h-full w-full object-cover group-hover:scale-105 transition duration-300" alt="Strana 1">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">Zvětšit / Vergrößern</div>
-                    </a>
-                    <a href="images/jidelni-listek 2.jpg" target="_blank" class="group relative block aspect-[3/4] overflow-hidden rounded-xl border bg-stone-100 shadow-sm hover:shadow transition">
-                        <img src="images/jidelni-listek 2.jpg" class="h-full w-full object-cover group-hover:scale-105 transition duration-300" alt="Strana 2">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">Zvětšit / Vergrößern</div>
-                    </a>
-                    <a href="images/jidelni-listek 3.jpg" target="_blank" class="group relative block aspect-[3/4] overflow-hidden rounded-xl border bg-stone-100 shadow-sm hover:shadow transition">
-                        <img src="images/jidelni-listek 3.jpg" class="h-full w-full object-cover group-hover:scale-105 transition duration-300" alt="Strana 3">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">Zvětšit / Vergrößern</div>
-                    </a>
-                    <a href="images/jidelni-listek 4.jpg" target="_blank" class="group relative block aspect-[3/4] overflow-hidden rounded-xl border bg-stone-100 shadow-sm hover:shadow transition">
-                        <img src="images/jidelni-listek 4.jpg" class="h-full w-full object-cover group-hover:scale-105 transition duration-300" alt="Strana 4">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">Zvětšit / Vergrößern</div>
-                    </a>
-                    <a href="images/jidelni-listek 5.jpg" target="_blank" class="group relative block aspect-[3/4] overflow-hidden rounded-xl border bg-stone-100 shadow-sm hover:shadow transition">
-                        <img src="images/jidelni-listek 5.jpg" class="h-full w-full object-cover group-hover:scale-105 transition duration-300" alt="Strana 5">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">Zvětšit / Vergrößern</div>
-                    </a>
+            <div id="menuModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-stone-900/60 backdrop-blur-sm p-4 sm:p-6 justify-center items-start">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full my-4 mx-auto relative overflow-hidden border border-stone-200">
+            
+            <div class="sticky top-0 bg-white border-b border-stone-200 px-6 py-4 flex justify-between items-center z-10">
+                <div>
+                    <h3 data-lang="cs" class="font-bold text-2xl text-stone-900">Jídelní lístek</h3>
+                    <h3 data-lang="de" class="font-bold text-2xl text-stone-900 hidden">Speisekarte</h3>
                 </div>
-                <p data-lang="cs" class="text-center text-xs text-stone-400 mt-6">K dispozici máme celkem 10 stránek kompletního jídelního a nápojového lístku přímo na restauraci.</p>
-                <p data-lang="de" class="text-center text-xs text-stone-400 mt-6 hidden">Insgesamt 10 Seiten unserer kompletten Speise- und Getränkekarte stehen Ihnen vor Ort zur Verfügung.</p>
+                <button onclick="closeMenuModal()" class="text-stone-400 hover:text-stone-700 p-2 text-xl transition rounded-full hover:bg-stone-100">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
+
+            <div class="p-6 sm:p-10 space-y-12">
+                
+                <div>
+                    <h4 data-lang="cs" class="text-xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider">Polévky</h4>
+                    <h4 data-lang="de" class="text-xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider hidden">Suppen</h4>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-stone-900">Hovězí vývar s nudlemi</h5>
+                                <h5 data-lang="de" class="font-bold text-stone-900 hidden">Rinderbrühe mit Nudeln</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Tradiční silný vývar se zeleninou a nudlemi</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Traditionelle kräftige Brühe mit Gemüse und Nudeln</p>
+                            </div>
+                            <div class="font-bold text-amber-700 whitespace-nowrap">
+                                <span data-lang="cs">65 Kč</span> <span data-lang="de" class="hidden">2,80 €</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-stone-900">Česneková polévka se sýrem a krutony</h5>
+                                <h5 data-lang="de" class="font-bold text-stone-900 hidden">Knoblauchsuppe mit Käse und Croutons</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Voňavá česnečka se šunkou, sýrem a opečeným chlebem</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Herzhafte Knoblauchsuppe mit Schinken, Käse und geröstetem Brot</p>
+                            </div>
+                            <div class="font-bold text-amber-700 whitespace-nowrap">
+                                <span data-lang="cs">75 Kč</span> <span data-lang="de" class="hidden">3,20 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 data-lang="cs" class="text-xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider">Teplé a studené předkrmy</h4>
+                    <h4 data-lang="de" class="text-xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider hidden">Warme und kalte Vorspeisen</h4>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-stone-900">Topinka s pikantní masovou směsí</h5>
+                                <h5 data-lang="de" class="font-bold text-stone-900 hidden">Röstbrot mit pikanter Fleischmischung</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Křupavá topinka sypaná sýrem</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Knuspriges Röstbrot mit Käse bestreut</p>
+                            </div>
+                            <div class="font-bold text-amber-700 whitespace-nowrap">
+                                <span data-lang="cs">125 Kč</span> <span data-lang="de" class="hidden">5,30 €</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-stone-900">Domácí utopenec s cibulí</h5>
+                                <h5 data-lang="de" class="font-bold text-stone-900 hidden">Eingelegte Wurst mit Zwiebeln</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Podávaný s čerstvým chlebem</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Serviert mit frischem Brot</p>
+                            </div>
+                            <div class="font-bold text-amber-700 whitespace-nowrap">
+                                <span data-lang="cs">85 Kč</span> <span data-lang="de" class="hidden">3,60 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 data-lang="cs" class="text-xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider">Hlavní chody</h4>
+                    <h4 data-lang="de" class="text-xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider hidden">Hauptgerichte</h4>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-stone-900">Smažený kuřecí nebo vepřový řízek</h5>
+                                <h5 data-lang="de" class="font-bold text-stone-900 hidden">Paniertes Hähnchen- oder Schweineschnitzel</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Klasický smažený řízek, citron</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Klassisches paniertes Schnitzel, Zitrone</p>
+                            </div>
+                            <div class="font-bold text-amber-700 whitespace-nowrap">
+                                <span data-lang="cs">185 Kč</span> <span data-lang="de" class="hidden">7,90 €</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-stone-900">Katův šleh s rýží nebo hranolky</h5>
+                                <h5 data-lang="de" class="font-bold text-stone-900 hidden">Scharfer Fleischtopf mit Reis oder Pommes</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Pikantní směs vepřového masa a zeleniny</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Pikante Mischung aus Schweinefleisch und Gemüse</p>
+                            </div>
+                            <div class="font-bold text-amber-700 whitespace-nowrap">
+                                <span data-lang="cs">215 Kč</span> <span data-lang="de" class="hidden">9,15 €</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-stone-900">Kuřecí plátek s broskví a sýrem</h5>
+                                <h5 data-lang="de" class="font-bold text-stone-900 hidden">Hähnchenbrust mit Pfirsich und Käse überbacken</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Zapečená kuřecí prsa, jemná chuť</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Überbackene Hähnchenbrust, milder Geschmack</p>
+                            </div>
+                            <div class="font-bold text-amber-700 whitespace-nowrap">
+                                <span data-lang="cs">195 Kč</span> <span data-lang="de" class="hidden">8,30 €</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-stone-900">Svíčková na smetaně s houskovým knedlíkem</h5>
+                                <h5 data-lang="de" class="font-bold text-stone-900 hidden">Lendenbraten in Sahnesoße mit Semmelknödeln</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Tradiční česká omáčka, brusinky, šlehačka</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Traditionelle tschechische Soße, Preiselbeeren, Schlagsahne</p>
+                            </div>
+                            <div class="font-bold text-amber-700 whitespace-nowrap">
+                                <span data-lang="cs">245 Kč</span> <span data-lang="de" class="hidden">10,40 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 data-lang="cs" class="text-xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider">Bezmasá jídla</h4>
+                    <h4 data-lang="de" class="text-xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider hidden">Vegetarische Gerichte</h4>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-stone-900">Smažený sýr (Eidam nebo Hermelín)</h5>
+                                <h5 data-lang="de" class="font-bold text-stone-900 hidden">Panierter Käse (Edamer oder Hermelin)</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Tradiční česká klasika, smažený dozlatova</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Traditioneller tschechischer Klassiker, goldbraun gebraten</p>
+                            </div>
+                            <div class="font-bold text-amber-700 whitespace-nowrap">
+                                <span data-lang="cs">175 Kč</span> <span data-lang="de" class="hidden">7,45 €</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-lg text-stone-900">Grilovaný Hermelín s brusinkami</h5>
+                                <h5 data-lang="de" class="font-bold text-lg text-stone-900 hidden">Gegrillter Hermelin-Käse mit Preiselbeeren</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Teplý sýr s brusinkovým terčem a opečeným toustem</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Warmer Käse mit Preiselbeeren und geröstetem Toast</p>
+                            </div>
+                            <div class="font-bold text-amber-700 text-lg whitespace-nowrap">
+                                <span data-lang="cs">165 Kč</span>
+                                <span data-lang="de" class="hidden">7,00 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 data-lang="cs" class="text-xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider">Dětská jídla</h4>
+                    <h4 data-lang="de" class="text-xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider hidden">Kindergerichte und Desserts</h4>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-stone-900">Kuřecí plátek/řízeček pro děti, hranolky</h5>
+                                <h5 data-lang="de" class="font-bold text-stone-900 hidden">Hähnchenbrust/Schnitzel für Kinder, Pommes</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Malá dětská porce, kečup</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Kleine Kinderportion, Ketchup</p>
+                            </div>
+                            <div class="font-bold text-amber-700 text-lg whitespace-nowrap">
+                                <span data-lang="cs">175 Kč</span>
+                                <span data-lang="de" class="hidden">7,45 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 data-lang="cs" class="text-2xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider">Přílohy</h4>
+                    <h4 data-lang="de" class="text-2xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider hidden">Beilagen</h4>
+                    <div class="flex justify-between border-b border-stone-100 pb-2">
+                        <span data-lang="cs">Hranolky / Krokety</span><span data-lang="de" class="hidden">Pommes / Kroketten</span>
+                        <div class="font-bold text-amber-700 text-lg whitespace-nowrap">
+                            <span data-lang="cs">50 Kč</span>
+                            <span data-lang="de" class="hidden">2,15 €</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between border-b border-stone-100 pb-2">
+                        <span data-lang="cs">Vařené brambory / Americké brambory</span><span data-lang="de" class="hidden">Salzkartoffeln / Wedges</span>
+                        <div class="font-bold text-amber-700 text-lg whitespace-nowrap">
+                            <span data-lang="cs">45 Kč</span>
+                            <span data-lang="de" class="hidden">1,90 €</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between border-b border-stone-100 pb-2">
+                        <span data-lang="cs">Houskový / Bramborový knedlík</span><span data-lang="de" class="hidden">Semmel- / Kartoffelknödel</span>
+                        <div class="font-bold text-amber-700 text-lg whitespace-nowrap">
+                            <span data-lang="cs">45 Kč</span>
+                            <span data-lang="de" class="hidden">1,90 €</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between border-b border-stone-100 pb-2">
+                        <span data-lang="cs">Tatarská omáčka / Kečup</span><span data-lang="de" class="hidden">Tartarsauce / Ketchup</span>
+                        <div class="font-bold text-amber-700 text-lg whitespace-nowrap">
+                            <span data-lang="cs">30 Kč</span>
+                            <span data-lang="de" class="hidden">1,30 €</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 data-lang="cs" class="text-2xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider">Dezerty</h4>
+                    <h4 data-lang="de" class="text-2xl font-bold text-amber-700 border-b-2 border-stone-200 pb-2 mb-6 uppercase tracking-wider hidden">Desserts</h4>
+
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-lg text-stone-900">Domácí palačinka s ovocem a šlehačkou</h5>
+                                <h5 data-lang="de" class="font-bold text-lg text-stone-900 hidden">Hausgemachter Pfannkuchen mit Früchten und Sahne</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Zdobená čokoládovým přelivem</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Mit Schokosoße garniert</p>
+                            </div>
+                            <div class="font-bold text-amber-700 text-lg whitespace-nowrap">
+                                <span data-lang="cs">95 Kč</span>
+                                <span data-lang="de" class="hidden">4,00 €</span>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-baseline border-b border-stone-100 pb-4 hover:bg-stone-50 transition px-2 rounded-lg">
+                            <div class="pr-4">
+                                <h5 data-lang="cs" class="font-bold text-lg text-stone-900">Horké maliny s vanilkovou zmrzlinou</h5>
+                                <h5 data-lang="de" class="font-bold text-lg text-stone-900 hidden">Heiße Himbeeren mit Vanilleeis</h5>
+                                <p data-lang="cs" class="text-stone-500 text-sm mt-1">Osvěžující sladká tečka na závěr</p>
+                                <p data-lang="de" class="text-stone-500 text-sm mt-1 hidden">Erfrischendes Dessert zum Abschluss</p>
+                            </div>
+                            <div class="font-bold text-amber-700 text-lg whitespace-nowrap">
+                                <span data-lang="cs">115 Kč</span>
+                                <span data-lang="de" class="hidden">4,90 €</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 bg-stone-50 border-t border-stone-200 flex justify-end">
+                <button onclick="closeMenuModal()" class="bg-stone-900 text-white px-6 py-2 rounded-xl hover:bg-stone-700 transition text-sm font-medium cursor-pointer">
+                    <span data-lang="cs">Zavřít</span>
+                    <span data-lang="de" class="hidden">Schließen</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
         </div>
     </section>
 
     <section id="reviews" class="py-24 bg-stone-900 text-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <div class="mb-8"><i class="fa-solid fa-quote-left text-3xl text-amber-500"></i></div>
-            <p class="text-xl italic mb-8">"Wunderschöne ruhige Lage in Rumburk. Sehr freundliches Personal, toller Service für deutsche Touristen, alles sauber und barrierefrei. Hunde sind wirklich willkommen!"</p>
+            <p data-lang="cs" class="text-xl italic mb-8">"Skvělé služby a opravdu milý personál. Dali nám skvělé tipy na turistiku. 10/10 levný pokoj a dobré sprchy/toalety."</p>
+            <p data-lang="de" class="text-xl italic mb-8 hidden">"Super Service und sehr nettes Personal. Wir haben tolle Wandertipps bekommen. 10/10 – günstiges Zimmer und gute Duschen/Toiletten."</p>
             <div class="flex items-center justify-center space-x-1 text-amber-500 mb-2">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <span class="text-stone-400">— Hans M., Google Reviews</span>
+            <span class="text-stone-400">— Ferran Pardo, Google Reviews</span>
         </div>
     </section>
 
@@ -281,7 +514,7 @@
                     <a href="tel:+420777106595" class="hover:text-amber-700 transition">+420 777 106 595</a>
                 </p>
                 
-                <a href="http://googleusercontent.com/maps.google.com/2" target="_blank" class="inline-flex items-center text-xs bg-stone-100 hover:bg-stone-200 text-stone-700 px-3 py-2 rounded-lg transition font-semibold border">
+                <a href="https://www.google.com/maps/place/Restaurace+a+penzion+Zátiší/@50.9315307,14.5300404,17z/data=!3m1!4b1!4m6!3m5!1s0x47090f12f1c06989:0xd7e5350421ddab5!8m2!3d50.9315307!4d14.5326153!16s%2Fg%2F11q279vn4t?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-flex items-center text-xs bg-stone-100 hover:bg-stone-200 text-stone-700 px-3 py-2 rounded-lg transition font-semibold border">
                     <i class="fa-solid fa-map-location-dot mr-2 text-amber-700"></i>
                     <span data-lang="cs">Navigovat přes Google Maps</span>
                     <span data-lang="de" class="hidden">Route via Google Maps</span>
@@ -318,22 +551,53 @@
     </footer>
 
     <script>
+        // Funkce pro otevření modalu
+        function openMenuModal() {
+            const modal = document.getElementById('menuModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('modal-open');
+        }
+
+        // Funkce pro zavření modalu
+        function closeMenuModal() {
+            const modal = document.getElementById('menuModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.classList.remove('modal-open');
+        }
+
+        // Zavření kliknutím mimo samotné okno (na šedé pozadí)
+        window.onclick = function(event) {
+            const modal = document.getElementById('menuModal');
+            if (event.target === modal) {
+                closeMenuModal();
+            }
+        }
+
+        // Funkce pro přepínání jazyků (rozšířená o podporu elementů uvnitř modalu)
         function switchLang(lang) {
-            const csElements = document.querySelectorAll('[data-lang="cs"]');
-            const deElements = document.querySelectorAll('[data-lang="de"]');
+            // Skryje/zobrazí elementy podle jazyka na celé stránce i v modalu
+            document.querySelectorAll('[data-lang="cs"]').forEach(el => {
+                if(lang === 'cs') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+            
+            document.querySelectorAll('[data-lang="de"]').forEach(el => {
+                if(lang === 'de') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+
+            // Úprava vzhledu tlačítek pro přepínání CZ/DE
             const btnCs = document.getElementById('btn-cs');
             const btnDe = document.getElementById('btn-de');
 
             if (lang === 'cs') {
-                csElements.forEach(el => el.classList.remove('hidden'));
-                deElements.forEach(el => el.classList.add('hidden'));
                 btnCs.className = "px-3 py-1 rounded-full bg-white shadow-sm text-amber-700";
                 btnDe.className = "px-3 py-1 rounded-full text-stone-500 hover:text-stone-900";
             } else {
-                csElements.forEach(el => el.classList.add('hidden'));
-                deElements.forEach(el => el.classList.remove('hidden'));
-                btnDe.className = "px-3 py-1 rounded-full bg-white shadow-sm text-amber-700";
                 btnCs.className = "px-3 py-1 rounded-full text-stone-500 hover:text-stone-900";
+                btnDe.className = "px-3 py-1 rounded-full bg-white shadow-sm text-amber-700";
             }
         }
     </script>
